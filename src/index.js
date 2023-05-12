@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import Person from "./Pages/Person";
+import Genre from "./Pages/Genre";
+import PersonChoise from "./Pages/PersonChoise";
+import Movie from "./Pages/Movie";
+import Layout from "./Component/Layout";
+
+function App() {
+  return (
+    <div>
+      <h2>Welcome to App Component ...</h2>
+      <ul>
+        <li>
+          <Link to="./Persons">Person List</Link>
+        </li>
+        <li>
+          <Link to="./Genres">Genre List</Link>
+        </li>
+        <li>
+          <Link to="./PersonChoises">Person Choise List</Link>
+        </li>
+        <li>
+          <Link to="./Movies">Movie List</Link>
+        </li>
+      </ul>
+      <Route path="/Persons" component={Person}></Route>
+      <Route path="/Genres" component={Genre}></Route>
+      <Route path="/PersonChoises" component={PersonChoise}></Route>
+      <Route path="/Movies" component={Movie}></Route>
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Layout>
+      <App></App>
+    </Layout>
+  </BrowserRouter>,
+  document.getElementById("createroot")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

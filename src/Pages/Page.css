@@ -1,0 +1,23 @@
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    height: 7em;
+    width: 35em;
+    border: 3px solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: yellowgreen;
+}
+
+.title{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
