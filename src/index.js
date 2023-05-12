@@ -14,7 +14,7 @@ function App() {
       <h2>Welcome to App Component ...</h2>
       <ul>
         <li>
-          <Link to="./Persons">Person List</Link>
+          <Link to="/">Person List</Link>
         </li>
         <li>
           <Link to="./Genres">Genre List</Link>
@@ -26,10 +26,12 @@ function App() {
           <Link to="./Movies">Movie List</Link>
         </li>
       </ul>
-      <Route path="/Persons" component={Person}></Route>
-      <Route path="/Genres" component={Genre}></Route>
-      <Route path="/PersonChoises" component={PersonChoise}></Route>
-      <Route path="/Movies" component={Movie}></Route>
+      <Switch>
+        <Route exact path="/" component={Person}></Route>
+        <Route path="/Genres" component={Genre}></Route>
+        <Route path="/PersonChoises" component={PersonChoise}></Route>
+        <Route path="/Movies" component={Movie}></Route>
+      </Switch>
     </div>
   );
 }
@@ -42,3 +44,7 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("createroot")
 );
+
+// Link: Its navigation to another page.
+// Route: used routing data with Link.
+// Switch: It staying exact place and wait for signal from UI.
