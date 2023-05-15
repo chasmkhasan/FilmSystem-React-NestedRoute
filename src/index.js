@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Link, NavLink, Switch, Route } from "react-router-dom";
 
 import Person from "./Pages/Person";
 import Genre from "./Pages/Genre";
 import PersonChoise from "./Pages/PersonChoise";
 import Movie from "./Pages/Movie";
 import Layout from "./Component/Layout";
+import GetPersonChoise from "./Pages/GetPersonChoise";
+import "./index.css";
+import InvalidPath from "./Pages/Notfound";
 
 function App() {
   return (
@@ -17,13 +20,19 @@ function App() {
           <Link to="/">Person List</Link>
         </li>
         <li>
-          <Link to="./Genres">Genre List</Link>
+          <NavLink to="./Genres" activeClassName="classColor">
+            Genre List
+          </NavLink>
         </li>
         <li>
-          <Link to="./PersonChoises">Person Choise List</Link>
+          <NavLink to="./PersonChoises" activeClassName="classColor">
+            Person Choise List
+          </NavLink>
         </li>
         <li>
-          <Link to="./Movies">Movie List</Link>
+          <NavLink to="./Movies" activeClassName="classColor">
+            Movie List
+          </NavLink>
         </li>
       </ul>
       <Switch>
@@ -31,6 +40,8 @@ function App() {
         <Route path="/Genres" component={Genre}></Route>
         <Route path="/PersonChoises" component={PersonChoise}></Route>
         <Route path="/Movies" component={Movie}></Route>
+        <Route path="/GetPersonChoise" component={GetPersonChoise}></Route>
+        <Route component={InvalidPath}></Route>
       </Switch>
     </div>
   );

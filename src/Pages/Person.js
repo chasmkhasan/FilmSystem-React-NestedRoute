@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import GetPersonChoise from "./GetPersonChoise";
 
 import "./Page.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Person() {
   const [persons, setPersons] = useState([]);
@@ -28,6 +30,11 @@ function Person() {
                 <td className="title">
                   <b>Person Email:- </b>
                   {emp.email}
+                </td>
+                <td>
+                  <Link to={{ pathname: "./GetPersonChoise", state: emp.id }}>
+                    Further go foreward
+                  </Link>
                 </td>
               </div>
             </tr>
