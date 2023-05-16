@@ -45,15 +45,9 @@ function App() {
         <Route path="/PersonChoises" component={PersonChoise}></Route>
         <Route path="/Movies" component={Movie}></Route>
         <Route path="/GetPersonChoise" component={GetPersonChoise}></Route>
-        <Route path="/src/Pages/NewGenrePost" component={NewGenrePost}></Route>
-        <Route
-          path="/src/Pages/MovieLinkPost"
-          component={MovieLinkPost}
-        ></Route>
-        <Route
-          path="/src/Pages/MovieRatingPost"
-          component={MovieRating}
-        ></Route>
+        <Route path="/NewGenrePost" component={NewGenrePost}></Route>
+        <Route path="/MovieLinkPost" component={MovieLinkPost}></Route>
+        <Route path="/MovieRatingPost" component={MovieRating}></Route>
         <Route component={InvalidPath}></Route>
       </Switch>
     </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Page.css";
 
 const PersonChoisePost = () => {
-  console.log(27777777777777777777);
+  console.log(111111111111111);
   const [data, setData] = useState({
     name: "",
     genreID: "",

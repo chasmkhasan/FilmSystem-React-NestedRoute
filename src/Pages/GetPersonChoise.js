@@ -8,7 +8,6 @@ import MovieLinkPost from "./MovieLinkPost";
 import MovieRating from "./MovieRatingPost";
 
 const GetPersonChoise = (props) => {
-  console.log(27777777777777777777);
   console.log(props.location.state);
 
   const [getpersonchoise, setGetPersonChoise] = useState([]);
@@ -38,7 +37,11 @@ const GetPersonChoise = (props) => {
                   <b>Movie Link:- </b>
                   {emp.link}
                   <Link
-                    to={{ pathname: "./MovieLinkPost", state: emp.personID }}
+                    to={{
+                      pathname: "./MovieLinkPost",
+                      state: emp.personID,
+                      state: emp.genreID,
+                    }}
                   >
                     Add New Film and Link
                   </Link>
@@ -47,7 +50,11 @@ const GetPersonChoise = (props) => {
                   <b>Movie Rating </b>
                   {emp.rating}
                   <Link
-                    to={{ pathname: "./MovieRatingPost", state: emp.personID }}
+                    to={{
+                      pathname: "./MovieRatingPost",
+                      state: emp.personID,
+                      state: emp.movieId,
+                    }}
                   >
                     Add New Rating
                   </Link>
@@ -55,9 +62,7 @@ const GetPersonChoise = (props) => {
                 <td className="title">
                   <b>Person ID </b>
                   {emp.personID}
-                  <Link
-                    to={{ pathname: "./NewGenrePost", state: emp.personID }}
-                  >
+                  <Link to={{ pathname: "./NewGenrePost", state: emp.name }}>
                     Add New Genre
                   </Link>
                 </td>
