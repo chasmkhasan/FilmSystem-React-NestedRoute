@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import GetPersonChoise from "./GetPersonChoise";
-
-import "./Page.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
+import GetPersonChoise from "./GetPersonChoise";
+import "./Page.css";
 
 function Person() {
   const [persons, setPersons] = useState([]);

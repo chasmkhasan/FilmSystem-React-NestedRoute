@@ -8,6 +8,10 @@ import PersonChoise from "./Pages/PersonChoise";
 import Movie from "./Pages/Movie";
 import Layout from "./Component/Layout";
 import GetPersonChoise from "./Pages/GetPersonChoise";
+import NewGenrePost from "./Pages/NewGenrePost";
+import MovieLinkPost from "./Pages/MovieLinkPost";
+import MovieRating from "./Pages/MovieRatingPost";
+
 import "./index.css";
 import InvalidPath from "./Pages/Notfound";
 
@@ -41,6 +45,15 @@ function App() {
         <Route path="/PersonChoises" component={PersonChoise}></Route>
         <Route path="/Movies" component={Movie}></Route>
         <Route path="/GetPersonChoise" component={GetPersonChoise}></Route>
+        <Route path="/src/Pages/NewGenrePost" component={NewGenrePost}></Route>
+        <Route
+          path="/src/Pages/MovieLinkPost"
+          component={MovieLinkPost}
+        ></Route>
+        <Route
+          path="/src/Pages/MovieRatingPost"
+          component={MovieRating}
+        ></Route>
         <Route component={InvalidPath}></Route>
       </Switch>
     </div>
